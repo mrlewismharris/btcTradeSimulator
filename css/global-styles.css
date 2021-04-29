@@ -1,0 +1,64 @@
+/* Fonts (load first) */
+@font-face {font-family: 'Open Sans'; src: url('../fonts/opensans.ttf') format('truetype')}
+@font-face {font-family: 'Roboto'; src: url('../fonts/roboto.ttf') format('truetype')}
+
+/* MOBILE AND GLOBAL STYLES */
+body {background:#111;transition:background 0.2s;margin:0px;font-family:'Open Sans', sans-serif;}
+body.light {background:#fff}
+
+/* Page content container (for the actual content of the webpage) */
+#pageContent {width:100%;box-sizing:border-box;padding:15px;background:#111;color:#fff;transition:background .2s, color .2s}
+#pageContent.light {background:#fff;color:#000}
+
+/* Quick class styles */
+.novisible {display:none}
+.noScriptMsg {text-align:center}
+
+/* Global Menu Ribbon */
+.menuRibbon {background:#666;}
+
+/* Body "blocker" (while the menu is open block the body elements until clicked) */
+#bodyBlocker {width:100%;height:100%;position:absolute;top:0;left:0;background:#000;opacity:0.8;z-index:50;}
+
+/* Always-open ribbon */
+.menuRibbon {background:#666;width:100%;overflow:hidden;height:50px;box-sizing:border-box;color:#000;border-bottom:1px solid #333;display:block;z-index:100;position:relative}
+.menuLogo {display:inline-block;margin:6px 7px;font-family: 'Roboto', sans-serif;color:#f7f7f7;font-size:32px;background:#d50000;padding:0px 10px;}
+/* The menu toggle */
+#menuToggleContainer {cursor: pointer;height: 40px;width: 35px;overflow: hidden;position: absolute;top: 10px; right: 10px;}
+#menuOpenButton {opacity: 1;position: absolute;top: 0px;left: 0px;transition: opacity 0.3s;}
+#menuOpenButton span {width: 35px;height: 5px;margin-bottom: 7px;display: block;background: #eee;}
+#menuCloseButton {opacity: 0;position: absolute;top: 0px;right: -5px;transition: opacity 0.3s;}
+#menuCloseButton span {margin: auto;margin-left: 5px;width: 35px;height: 5px;margin-bottom: 19px;display: block;background: #eee;transform-origin: 0% 50%;transform: rotate(45deg);}
+#menuCloseButton span:last-of-type {transform: rotate(-45deg);margin-bottom: 0px;}
+
+/* Hidden slide-in menu */
+#hiddenMenu {z-index: 100;width: 100%;position: absolute;overflow: hidden;box-sizing: border-box;background: #222;color: #000;border-bottom: 1px solid #000;display:block;left: -100%;transition: left 0.2s;}
+.menuItem {text-decoration: none;color: #fff;width: 100%;display: inline-block;text-align: center;padding: 10px;box-sizing: border-box;font-size: 18px;font-weight: bold;transition:background .2s}
+.menuItem:hover {background: #333}
+.menuItem a {text-decoration: none;color: #fff;}
+
+/* Dark-Mode Slider */
+.ribbonSwitch p {display:inline;margin-right:5px;}
+.switch {position:relative;display:inline-block;width:52px;height:26px;}
+.switch input {opacity:0;width:0;height:0;}
+.slider {position:absolute;cursor:pointer;top:0;left:0;right: 0;bottom:0;background-color:#777;-webkit-transition:.2s;transition:.2s;}
+.slider:before {position:absolute;content:"";height:18px;width:18px;left:4px;bottom:4px;background-color:#f5f5f5;-webkit-transition:.2s;transition:.12s;}
+input:checked + .slider {background-color: #2196F3;}
+input:focus + .slider {box-shadow: 0 0 1px #2196F3;}
+input:checked + .slider:before {-webkit-transform: translateX(26px);-ms-transform: translateX(26px);transform: translateX(26px);}
+/* Rounded sliders */
+.slider.round {border-radius: 34px;}
+.slider.round:before {border-radius: 50%;}
+
+/* TABLET STYLES */
+@media screen and (min-width: 500px) {
+  /* applies to screens wider than 499px */
+  #topScrollContainer {opacity:0;height:0px;overflow:hidden}
+}
+
+/* DESKTOP STYLES */
+@media screen and (min-width: 1000px) {
+  /* applies to screens wider than 999px */
+  #pageContent {max-width:970px;margin:auto}
+  #hiddenMenu {max-width:500px;border-right:1px solid #000}
+}

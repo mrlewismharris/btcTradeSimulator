@@ -1,0 +1,58 @@
+/* MOBILE AND GLOBAL STYLES */
+/* This page styling uses a more hierarchical approach to styling the elements */
+h1 {margin:0px}
+.textCenter {text-align:center}
+
+#btcPriceContainer {border-radius:2px;width:100%;box-sizing:border-box;padding:12px;font-size:100%;border:2px solid #090;background:#222;cursor:pointer;user-select:none;}
+#btcPriceContainer.light {background:#fff;}
+#btcPriceContainer:hover {background:#1c1c1c}
+#btcPriceContainer.light:hover {background:#ccc}
+#btcPriceContainer p {text-align:center;margin:0px;}
+
+#btcPrice {display:block;height:90px;width:180px;margin:auto}
+#btcPrice #btcPriceCurrency {font-size:65px;width:35px;text-align:right;display:inline;float:left}
+#btcPrice .btcPriceLowHighContainer {padding:12px;font-size:24px;display:inline;float:left}
+#btcPrice .btcPriceLowHighContainer span {display:block;}
+#btcPrice .btcPriceLowHighContainer #btcPriceHigh {color:#afa;transition:color .5s}
+#btcPrice .btcPriceLowHighContainer #btcPriceHigh.light {color:#070}
+#btcPrice .btcPriceLowHighContainer #btcPriceLow {color:#faa;transition:color .5s}
+#btcPrice .btcPriceLowHighContainer #btcPriceLow.light {color:#700}
+
+#btcRefreshContainer {margin-top:5px;border-radius:2px;width:100%;box-sizing:border-box;padding:3px;border:2px solid #090;background:#222;cursor:pointer;user-select:none;overflow:hidden;}
+#btcRefreshContainer.light {background:#fff;color:#000}
+#btcRefreshContainer:hover {background:#111}
+#btcRefreshContainer.light:hover {background:#ccc}
+#btcRefreshContainer p {font-size:14px;margin:0px;text-align:center}
+#btcRefreshContainer #refreshBar {width:100%;height:2px;background:#090;margin:0px 0px 2px 0px;transition:width .2s}
+
+.btcWalletContainer {margin-top:5px;border-radius:2px;width:100%;box-sizing:border-box;padding:3px;border:2px solid #090;background:#222}
+.btcWalletContainer.light {background:#fff;color:#000}
+
+.walletHeader {font-size:24px;font-weight:bold;text-align:center;margin:4px}
+.walletVolumeLine {font-size:20px;text-align:center;margin:4px}
+
+.transactBtn {}
+.newlineLabel {margin:0px;text-align:center}
+.customBuyBtcContainer {text-align:center;margin:5px 0px}
+.customSellBtcContainer {text-align:center;margin:5px 0px}
+.inputBtcTransaction {font-size:18px;width:100px;}
+#inputBtcTransactionSell {width:200px}
+.transactBtn {font-size:18px;cursor:pointer;background:#111;color:#fff;border:2px solid #000}
+.transactBtn:hover {background:#333}
+.pWidth90 {padding:0px 5%;text-align:center}
+.inputLabelCurrency {font-size:20px}
+#btcConversionRate {margin:0px;}
+.closeButton {display:block;background:#fff;color:#000;border:1px solid #666;margin:auto;cursor:pointer;padding:2px 12px;font-size:16px}
+.closeButton:hover {background:#aaa}
+
+.inlineErrorMsg {background:#faa;text-align:center;border:1px solid #900;color:#000;width:80%;margin:10px auto;padding:8px 0px;}
+
+.transactionsOuterContainer {margin-top:5px;border-radius:2px;width:100%;box-sizing:border-box;padding:3px;border:2px solid #090;background:#222}
+.transactionsOuterContainer.light {background:#fff;color:#000}
+#transactionTableDropdownButton {padding:7px 10px;background:#111;color:#fff;margin:10px;margin-bottom:0px}
+#transactionTableDropdownButton:hover {background:#444;cursor:pointer}
+#transactionsTableContainer {transition:height 0.3s;width:100%:;height:200px;overflow-y:scroll;margin:10px;margin-top:0px;border:1px solid #111;border-top:none;}
+#transactionsTableContainer.closed {height:0px;}
+.transactionsTable {width:100%;text-align:center;background:#191919}
+.transactionsTable .sell {background:#600;}
+.transactionsTable .buy {background:#060}

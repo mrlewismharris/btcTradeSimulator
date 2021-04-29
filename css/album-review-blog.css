@@ -1,0 +1,73 @@
+/* MOBILE AND GLOBAL STYLES */
+body {background:#111;transition:all 0.2s}
+body.light {background:#fff}
+
+/* Body "blocker" (while the menu is open block the body elements until clicked) */
+#bodyBlocker {width:100%;height:100%;position:absolute;top:0;left:0;background:#000;opacity:0.8;z-index:50;}
+.novisible {display:none}
+
+/* Blog elements */
+.pageHeader {margin:5px 0px;font-size:1.7em;text-align:center;}
+.mainArtwork {max-width:100%;box-sizing:border-box;padding:5px;}
+.reviewBody {font-size:0.8em;padding:3px;}
+.postContainer {background:#333;box-shadow:7px 7px 5px #000;border-radius:15px;padding:8px;}
+  .postContainer.light {background:#fff;color:#000;box-shadow:7px 7px 5px #ccc;}
+  .postContainer h3 {margin:5px 0px 5px 0px;text-align:center}
+  .postContainer h5 {margin:0;text-align:center}
+.reviewBody {margin:5px 0px 5px 0px}
+.pageContent {background:#333!important}
+.pageContent.light {background:#fff!important}
+
+/* Interactive review body container */
+.reviewBodyContainer {overflow:hidden;height:80px;transition:height 1s;font-size:18px;line-height:24px;border:1px solid #aaa;border-bottom:none;margin-top:10px;padding:3px;border-radius:5px 5px 0 0}
+.reviewBodyContainerBtn {width:100%;font-size:14px;border:none;cursor:pointer;background:#555;color:#fff;font-weight:bold;line-height:10px;height:34px;border-radius:0 0 5px 5px}
+.expandedBody {height:350px;overflow-y:scroll}
+/* Individual track reviews */
+.trackReviewsContainer {border:1px solid #aaa;border-radius:5px 5px 0 0;padding:4px 6px;}
+.trackButtonsContainer {display:block;height:28px}
+.changeTrackReviewButton {height:28px;box-sizing:border-box;width:50%;text-align:center;float:left;display:inline-block;background:#aaa;font-weight:bold;border:1px solid #666;border-top:none;cursor:pointer;font-size:14px;line-height:26px}
+.changeTrackReviewButton:hover {background:#ddd}
+.previousTrackButton {border-radius:0 0 0 5px}
+.nextTrackButton {border-radius:0 0 5px 0;border-left:none}
+.youtubeEmbedContainer {position:relative;width:100%;height:0;padding-bottom:100%;z-index:10;background:#000}
+.youtubeEmbed {position:absolute;top:0;left:0;width:100%;height:100%;}
+.currentTrackReviewContainer {opacity:0;transition:opacity 0.2s}
+
+/* topScroll button elements */
+#topScrollContainer {position:fixed;bottom:0px;right:0px;visibility:hidden;z-index:100;}
+.topScrollBtn {font-size:12px;font-weight:bold;width:80px;height:50px;padding:5px 15px;box-sizing:border-box;background:#222;border-radius:100px 0 0 0;border:2px solid #fff;color:#fff;cursor:pointer;border-bottom:none;border-right:none}
+.topScrollBtn:hover {background:#444}
+
+/* TABLET STYLES */
+
+@media screen and (min-width: 500px) {
+
+  /* applies to screens wider than 499px */
+  .menuRibbon {background:#666;}
+  #topScrollContainer {opacity:0;height:0px;overflow:hidden}
+  
+  .artworkBodyFlexbox {display:flex;margin-top:25px;}
+  .artworkContainer {min-width:250px;width:45%;max-width:380px}
+  .albumReviewBodyContainer {width:100%;display:flex;flex-direction:column;}
+  .reviewBodyContainer {border:1px solid #aaa;margin-top:10px;padding:3px;overflow-y:scroll;flex-grow:1;margin-bottom:9px;border-radius:0px}
+  .reviewBodyContainer p {margin:0px 4px;line-height:32px;}
+  .reviewBodyContainerBtn {visibility:collapse;}
+  /* Individual tracks container styling */
+  .trackBodyFlexbox {display:flex;margin-top:25px;}
+  .youtubeEmbedContainer {min-width:180px;width:47%;max-width:300px;margin:5px;margin-bottom:9px;padding-bottom:0px;padding-bottom:31.5%;overflow:hidden;float:left}
+  .trackReviewTextContainer {width:100%;display:flex;flex-direction:column}
+  
+}
+
+
+
+/* DESKTOP STYLES */
+
+@media screen and (min-width: 1000px) {
+
+  /* applies to screens wider than 999px */
+  .menuRibbon {background:#666;}
+  #pageContent {max-width:970px;margin:auto}
+  #hiddenMenu {max-width:500px;border-right:1px solid #000}
+  
+}

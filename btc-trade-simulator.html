@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P2419279</title>
+  <link rel="stylesheet" href="css/global-styles.css">
+  <link rel="stylesheet" href="css/btc-trade-simulator.css">
+</head>
+<body class="themed">
+  <div class="menuRibbon">
+    <a href="index.html"><div class="menuLogo">LOGO!</div></a>
+    <div id="menuToggleContainer">
+      <div id="menuOpenButton"><span></span><span></span><span></span></div>
+      <div id="menuCloseButton"><span></span><span></span></div>
+    </div>
+  </div>
+  <div id="hiddenMenu">
+    <a href="album-review-blog.html"><div class="menuItem">Album Review Blog</div></a>
+    <a href="btc-trade-simulator.html"><div class="menuItem">BTC Trade Simulator</div></a>
+    <a href="#"><div class="menuItem">Menu Item 2</div></a>
+    <a href="#"><div class="menuItem">Menu Item 3</div></a>
+    <div class="menuItem">
+      <div class="ribbonSwitch">
+        <p>Dark Mode</p>
+        <label class="switch">
+          <input type="checkbox" id="darkmodeCheckbox" checked>
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div id="pageContent" class="themed">
+    <h1 class="textCenter">BTC Trade Simulator</h1>
+    <div id="btcPriceContainer" class="themed">
+      <p>Current BTC high/low price:</p>
+      <div id="btcPrice">
+        <div id="btcPriceCurrency">£</div>
+        <div class="btcPriceLowHighContainer">
+          <span id="btcPriceHigh" class="themed">Loading...</span>
+          <span id="btcPriceLow" class="themed">Loading...</span>
+        </div>
+      </div>
+      <p>Click or tap to change currency</p>
+    </div>
+    <div id="btcRefreshContainer" class="themed">
+      <div id="refreshBar"></div>
+      <p>Refresh in: <span id="refreshCountdown">10</span> (Click to force)</p>
+    </div>
+    <div class="btcWalletContainer themed">
+      <p class="walletHeader">Virtual Wallet</p>
+      <p class="walletVolumeLine">Fiat Wallet: <span id="walletQuantityFiat">Loading...</span></p>
+      <p class="walletVolumeLine">BTC Wallet: <span id="walletQuantityBTC">Loading...</span></p>
+    </div>
+    <div class="btcWalletContainer themed">
+      <p class="walletHeader">Instant Buy/Sell Bitcoin</p>
+      <p class="pWidth90">Instant buys and sells will fulfill existing listings, so you will get the worst market price.</p>
+      
+      <h2 class="textCenter">Buy BTC</h2>
+      <p class="newlineLabel">Enter USD to buy BTC with (buys @ highest price):</p>
+      <p id="instantBuyBtcError" class="inlineErrorMsg novisible"><span id="instantBuyBtcErrorText"></span><button class="closeButton" id="inlineErrorMsgCloseButton">Close</button></p>
+      <div class="customBuyBtcContainer">
+        <label for="inputBtcTransaction" class="inputLabelCurrency">$</label>
+        <input type="text" id="inputBtcTransactionBuy" class="inputBtcTransaction">
+      </div>
+      <div class="customSellBtcContainer">
+        <button class="transactBtn" id="addMaxBuy">Enter Max</button>
+        <button class="transactBtn" id="buyBtcButton">Buy Bitcoin</button>
+      </div>
+      <p id="btcBuyConversionRate" class="textCenter">Loading Conversion...</p>
+      
+      <h2 class="textCenter">Sell BTC</h2>
+      <p class="newlineLabel">Enter BTC to sell (sells @ lowest price):</p>
+      <p id="instantSellBtcError" class="inlineErrorMsg novisible"><span id="instantSellBtcErrorText"></span><button class="closeButton" id="inlineErrorMsgCloseButton">Close</button></p>
+      <div class="customSellBtcContainer">
+        <label for="inputBtcTransaction" class="inputLabelCurrency">₿</label>
+        <input type="text" id="inputBtcTransactionSell" class="inputBtcTransaction">
+      </div>
+      <div class="customSellBtcContainer">
+        <button class="transactBtn" id="addMaxSell">Enter Max</button>
+        <button class="transactBtn" id="sellBtcButton">Sell Bitcoin</button>
+      </div>
+      <p id="btcSellConversionRate" class="textCenter">Loading Conversion...</p>
+    </div>
+    <div class="transactionsOuterContainer themed">
+      <p class="walletHeader">Transaction History</p>
+      <div id="transactionTableDropdownButton">► Expand Transaction Table</div>
+      <div id="transactionsTableContainer" class="closed">
+        <p>Transactions failed to load...</p>
+      </div>
+    </div>
+  </div>
+  
+  <div id="bodyBlocker" class="novisible"></div>
+  <script src="js/global-menu.js"></script>
+  <script src="js/global-scripts.js"></script>
+  <script src="js/btc-trade-simulator.js"></script>
+</body>
+</html>

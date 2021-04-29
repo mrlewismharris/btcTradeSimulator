@@ -1,0 +1,166 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap');
+
+/* MOBILE AND GLOBAL STYLES */
+
+
+body {
+  background: #fcc;
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#menuContainer {
+  height:100%;
+}
+
+.invisibleCheckbox {
+  opacity: 0;
+  width: 60px;
+  height: 48px;
+  cursor: pointer;
+  position: fixed;
+  z-index: 500;
+  margin: 0;
+  display: block;
+  right: 0px
+}
+
+.invisibleCheckbox:checked ~ .menuShown #menuToggle #menuLineStack {
+  opacity: 0
+}
+
+.invisibleCheckbox:checked ~ .menuShown #menuToggle #menuLineClose {
+  opacity: 1
+}
+
+.invisibleCheckbox:checked ~ #menuHidden {
+  transform: scaleY(100%);
+}
+
+.menuShown {
+  background: #666;
+  width: 100%;
+  overflow: hidden;
+  height: 50px;
+  box-sizing: border-box;
+  color: #000;
+  border-bottom: 1px solid #333;
+  display:block;
+}
+
+.menuLogo {
+  display: inline-block;
+  margin: 6px 7px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #f7f7f7;
+  font-size: 32px;
+  background: #d50000;
+  padding: 0px 10px;
+}
+
+#menuHidden {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #222;
+  color: #000;
+  border-bottom: 1px solid #000;
+  display:block;
+  transform-origin: 50% 0%;
+  transform: scaleY(0%);
+  transition: transform 0.2s;
+}
+
+#menuHidden a {
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#menuHidden a:active {
+  color: #f00;
+}
+
+#menuToggle {
+  height: 40px;
+  width: 40px;
+  float: right;
+  box-sizing: border-box;
+  margin: 10px 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+#menuLineStack {
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: opacity 0.3s;
+}
+
+#menuLineStack span {
+  margin: auto;
+  width: 35px;
+  height: 5px;
+  margin-bottom: 7px;
+  display: block;
+  background: #eee;
+}
+
+#menuLineClose {
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: opacity 0.3s;
+}
+
+#menuLineClose span {
+  margin: auto;
+  margin-left: 5px;
+  width: 35px;
+  height: 5px;
+  margin-bottom: 19px;
+  display: block;
+  background: #eee;
+  transform-origin: 0% 50%;
+  transform: rotate(-45deg);
+}
+
+#menuLineClose span:first-of-type {
+  transform: rotate(45deg);
+}
+
+/* TABLET STYLES */
+
+@media screen and (min-width: 500px) {
+
+  /* applies to screens wider than 499px */
+  
+  body {
+    background: #cfc;
+  }
+  
+}
+
+
+
+/* DESKTOP STYLES */
+
+@media screen and (min-width: 1000px) {
+
+  /* applies to screens wider than 999px */
+
+  body {
+    background: #ccf;
+  } 
+}
